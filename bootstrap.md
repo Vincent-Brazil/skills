@@ -1,4 +1,4 @@
-# Bootstrap v1.0
+# Bootstrap v1.1
 
 ## How to Use This File
 
@@ -26,7 +26,13 @@ Then continue the session normally using the already-fetched skill content.
 
 | Skill | When to invoke | URL |
 |---|---|---|
-| knowledge-base-maintenance | At the START of any conversation referencing past work, ongoing projects, or prior context. At the END of any conversation where a solution, decision, workaround, or useful approach was reached. When user says "do you remember", "last time we", "add to KB", or implies shared history. Requires Notion MCP. | https://raw.githubusercontent.com/Vincent-Brazil/skills/main/skills/knowledge-base-maintenance.md |
+| knowledge-base-maintenance | At the START of any conversation referencing past work, ongoing projects, or prior context. At the END of any conversation where a solution, decision, workaround, or useful approach was reached. When user says "do you remember", "last time we", "add to KB", or implies shared history. Requires Notion access (see platform note). | https://raw.githubusercontent.com/Vincent-Brazil/skills/main/skills/knowledge-base-maintenance.md |
+
+**Platform note:** skills are written against claude.ai connector tools (e.g. the Notion
+MCP for knowledge-base-maintenance). On instances without the connector — such as CLI
+environments like Claude Code — substitute the local equivalents defined in that
+instance's private instructions. Per-platform wiring is documented privately in the
+knowledge base ("AI Instance Setup" page), not in this public repo.
 
 ---
 
