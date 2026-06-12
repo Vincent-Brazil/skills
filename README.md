@@ -8,8 +8,11 @@ so behaviour stays consistent everywhere.
 
 - **[bootstrap.md](bootstrap.md)** — the versioned skill index and entry point. Instances
   fetch it at session start, hold it in context, and load individual skills on demand.
-- **[skills/](skills/)** — individual skill files with YAML frontmatter (`name`,
-  `description`). The description tells the instance when to invoke the skill.
+- **[skills/](skills/)** — one folder per skill, each containing a `SKILL.md` with YAML
+  frontmatter (`name`, `description`) and markdown instructions, following the
+  [Agent Skills](https://agentskills.io) open standard. The description tells the
+  instance when to invoke the skill. Tools that support the standard natively can load
+  these folders directly.
 - **Versioning** — the bootstrap header carries a version number. When an instance fetches
   a skill, it re-checks the repo bootstrap; if the repo version is ahead of the copy in the
   instance's local instructions, it prompts the user to re-sync.
@@ -36,9 +39,10 @@ so behaviour stays consistent everywhere.
    and honour its version-check rule.
    ```
 
-2. Optionally install frequently used skills locally under
-   `~/.claude/skills/<skill-name>/SKILL.md` so they auto-trigger without a fetch. Locally
-   installed copies must be re-synced manually when the repo version changes.
+2. Optionally install frequently used skills locally by copying the skill folder from
+   `skills/` into `~/.claude/skills/` — the repo uses the same `<skill-name>/SKILL.md`
+   layout Claude Code expects, so they auto-trigger without a fetch. Locally installed
+   copies must be re-synced manually when the repo version changes.
 3. Claude Code has no claude.ai connectors. Where a skill references connector tools
    (e.g. Notion MCP), map them in `~/.claude/CLAUDE.md` to local equivalents — for
    example a CLI helper script — so the skill's process applies unchanged.
