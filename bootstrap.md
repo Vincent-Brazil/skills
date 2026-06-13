@@ -1,4 +1,4 @@
-# Bootstrap v1.5
+# Bootstrap v1.6
 
 ## How to Use This File
 
@@ -29,6 +29,7 @@ Then continue the session normally using the already-fetched skill content.
 | knowledge-base-maintenance | At the START of any conversation referencing past work, ongoing projects, or prior context. At the END of any conversation where a solution, decision, workaround, or useful approach was reached. When user says "do you remember", "last time we", "add to KB", or implies shared history. Requires Notion access (see platform note). | https://raw.githubusercontent.com/Vincent-Brazil/skills/main/skills/knowledge-base-maintenance/SKILL.md |
 | poc-decomposition | When working on a PoC that uses the three-level Vision → Phase → Task architecture: to validate a phase, decompose it into tasks, update the task ledger after execution, aggregate results, and determine phase transition readiness. | https://raw.githubusercontent.com/Vincent-Brazil/skills/main/skills/poc-decomposition/SKILL.md |
 | number-one | ONLY when the user explicitly invokes it ("/number-one", "engage Number One mode", "talk like a Star Trek first officer"). Never trigger proactively — it is a fun session persona (Starfleet XO addressing the user as Captain), and unsolicited activation would be annoying. The `disable-model-invocation` frontmatter flag enforces this on Claude Code; other instances must honour this rule manually. | https://raw.githubusercontent.com/Vincent-Brazil/skills/main/skills/number-one/SKILL.md |
+| tone-voice | At the END of any session where a new phrasing habit, style preference, or voice quirk emerged. At the START of any session involving writing, editing, or style-matching to Tom's voice. Triggers: "does that sound like me", "write it in my voice", "capture how I phrase things", "update my tone profile". Requires Notion access. | https://raw.githubusercontent.com/Vincent-Brazil/skills/main/skills/tone-voice/SKILL.md |
 
 **Platform note:** skills are written against claude.ai connector tools (e.g. the Notion
 MCP for knowledge-base-maintenance). On instances without the connector — such as CLI
